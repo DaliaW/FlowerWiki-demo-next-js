@@ -15,10 +15,14 @@ import styles from '../../styles/Home.module.css'
 
 const useStyles = makeStyles({
     root: {
-      maxWidth: 500,
+        maxWidth: 700,
+        fontSize: 40,
+        borderRadius: 10,
+        padding: "4%",
+        boxShadow: "0px 0px 15px 0px rgba(0, 0, 0, 0.64)",
     },
     media: {
-      height: 200,
+      height: 400,
     },
   });
 
@@ -34,7 +38,7 @@ function Flower({flower}) {
         </Head>
         <div className={styles.container}>
         <h1 className={styles.title}>{id.charAt(0).toUpperCase() + id.slice(1)}</h1>
-        <div className={styles.card}>
+        <div >
             <Card className={classes.root}>
                 <CardActionArea>
                     <CardMedia
