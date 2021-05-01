@@ -1,22 +1,59 @@
 import { useRouter } from 'next/router'
 
-import React from 'react'
 import Head from 'next/Head'
+
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
+import styles from '../../styles/Home.module.css'
+
+const useStyles = makeStyles({
+    root: {
+      maxWidth: 500,
+    },
+    media: {
+      height: 200,
+    },
+  });
 
 function Flower({flower}) {
     const router = useRouter()
     const { id } = router.query
+    const classes = useStyles();
 
     return (
         <>
         <Head>
         <title>{flower.color} {flower.id}</title> 
         </Head>
-
-        <div>
-            <h1>Hello {id}</h1>
-            <img src = {flower.image} />
-        </div>
+        <div className={styles.container}>
+        <h1 className={styles.title}>{id.charAt(0).toUpperCase() + id.slice(1)}</h1>
+        <div className={styles.card}>
+            <Card className={classes.root}>
+                <CardActionArea>
+                    <CardMedia
+                    className={classes.media}
+                    image={flower.image}
+                    title={flower.id}
+                    />
+                    <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                        {id.charAt(0).toUpperCase() + id.slice(1)}
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                    {flower.description}
+                    </Typography>
+                    </CardContent>
+                </CardActionArea>
+            </Card>
+            </div>
+            </div>
         </>
     )
 }

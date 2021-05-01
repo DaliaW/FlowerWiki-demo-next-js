@@ -1,5 +1,7 @@
 {
     "id": "rose",
     "color": "red",
-    "image": "https://images.unsplash.com/photo-1559563362-c667ba5f5480?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=645&q=80"
+    "image": "https://images.unsplash.com/photo-1559563362-c667ba5f5480?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=645&q=80",
+    "description": "A rose is a woody perennial flowering plant of the genus Rosa, in the family Rosaceae, or the flower it bears."
+
 }
