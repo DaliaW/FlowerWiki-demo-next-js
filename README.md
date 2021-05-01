@@ -1,3 +1,3 @@
 # FlowerWiki demo made with next-js
 
-This is a simple FlowerWiki demo for me (nothing fancy 😂) just to get familiar with Next JS
+This is a simple FlowerWiki demo that I created for practice (nothing fancy 😂) and to get familiar with Next JS
